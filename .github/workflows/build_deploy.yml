@@ -34,8 +34,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: 
-            - wenisman/buf-generator:latest
-            - wenisman/buf-generator:${{github.event.release.tag_name}}
+          tags: |
+            wenisman/buf-generator:latest
+            wenisman/buf-generator:${{github.event.release.tag_name}}
           labels: ${{ steps.meta.outputs.labels }}
 
