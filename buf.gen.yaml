@@ -1,0 +1,28 @@
+version: v1
+plugins:
+  - name: cpp
+    out: /proto/gen/cpp
+  - name: java
+    out: /proto/gen/java
+  - name: go
+    out: /proto/gen/go
+    opt: 
+      - paths=source_relative
+  - name: go-grpc
+    out: /proto/gen/go
+    opt:
+      - paths=source_relative
+      - require_unimplemented_servers=false
+  - name: js
+    out: /proto/gen/nodejs
+    opt: 
+      - import_style=commonjs,binary
+  - name: grpc
+    out: /proto/gen/nodejs
+    opt: 
+      - grpc_js
+    path: grpc_tools_node_protoc_plugin
+  - name: ts
+    out: /proto/gen/nodejs
+    opt: 
+      - grpc_js
