@@ -13,4 +13,5 @@ if [ -f /proto/buf.yaml ]; then
 fi
 
 # convert the haskell protos as well
+mkdir -p /proto/gen/haskell
 find ./ -name "*.proto" -exec protoc --plugin=protoc-gen-haskell=`which proto-lens-protoc` --haskell_out=./gen/haskell {} \;
